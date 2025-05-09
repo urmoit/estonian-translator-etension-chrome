@@ -1,0 +1,1 @@
+# estonian-translator-etension-chrome
