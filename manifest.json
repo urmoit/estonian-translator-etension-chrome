@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Estonian Translator for Websites",
+  "version": "1.0",
+  "description": "Translates supported websites' UI to Estonian. Starts with roblox.com.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://www.roblox.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/*"],
+      "js": ["content-scripts/roblox.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

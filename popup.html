@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estonian Translator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      width: 280px;
+      padding: 15px;
+      border-radius: 12px; /* Curved corners for the whole popup */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .status-box {
+      border-radius: 8px; /* Curved corners for the status box */
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .status {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .supported {
+      color: green;
+    }
+
+    .unsupported {
+      color: red;
+    }
+
+    .about {
+      font-size: 13px;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .link, .btn {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #0066cc;
+      padding: 8px;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease; /* Smooth button hover effect */
+    }
+
+    .link:hover, .btn:hover {
+      background-color: #005bb5;
+    }
+
+    .version-info {
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .version-status {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Estonian Translator</h1>
+    <img src="icons/icon128.png" alt="icon" width="24" height="24" />
+  </header>
+
+  <div class="status-box">
+    <div id="site" class="status"></div>
+    <div id="status" class="status"></div>
+  </div>
+
+  <div class="about">
+    This extension translates UIs to Estonian for supported sites like <b>Roblox</b>.
+
+    <a href="#" class="link btn" id="settingsBtn">Settings (Coming soon)</a>
+    <a href="https://urmoit-studio.itch.io" class="link btn" target="_blank">More by Urmoit Studio</a>
+  </div>
+
+  <div class="version-info">
+    <p>Version: <span id="version">1.0</span></p>
+    <p id="updateStatus" class="version-status">Checking for updates...</p>
+    <button id="checkUpdateBtn" class="btn">Check for Updates</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
